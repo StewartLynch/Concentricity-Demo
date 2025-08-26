@@ -1,6 +1,6 @@
 # Concentric Corners in os26
 
-![AppIcon128](Images/AppIcon128.png) This is the starter project for the video on concentric corners in os26
+![AppIcon128](Images/AppIcon128.png) This is the completed source code for the video on concentric corners in os26
 
 Release Date: October 12,  2025
 
