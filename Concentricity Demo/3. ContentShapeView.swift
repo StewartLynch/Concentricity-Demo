@@ -33,7 +33,7 @@ struct ContentShapeView: View {
                 Text("padding")
             }
             .padding()
-            // Clipped Rectangle
+            // Clipped Color
         }
     }
 }
