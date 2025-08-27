@@ -22,7 +22,23 @@ struct NonUniformConcentric: View {
     var body: some View {
             ZStack{
                 VStack {
-                  
+                    ConcentricRectangle(
+                        topLeadingCorner: 0,
+                        topTrailingCorner: 50,
+                        bottomLeadingCorner: .concentric,
+                        bottomTrailingCorner: .concentric(minimum: 12)
+                    )
+                    .fill(.mint.gradient)
+                    .padding(padding)
+                    Color.red
+                        .clipShape(
+                            ConcentricRectangle(
+                                uniformTopCorners: .concentric(minimum: 20),
+                                bottomLeadingCorner: .concentric,
+                                bottomTrailingCorner: .fixed(100)
+                            )
+                        )
+                        .padding(padding)
                 }
                 Slider(value: $padding, in: 0...100)
                     .padding()

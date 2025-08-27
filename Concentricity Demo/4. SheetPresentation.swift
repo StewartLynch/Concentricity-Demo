@@ -35,6 +35,20 @@ struct SheetPresentation: View {
                         }
                     }
                 }
+                .sheet(isPresented: $showSheet) {
+                    ConcentricRectangle()
+                        .fill(.blue.gradient)
+                        .padding()
+                        .ignoresSafeArea()
+                        .presentationDetents([.medium])
+                }
+                .popover(isPresented: $showPopOver) {
+                    Color.yellow
+                        .clipShape(ConcentricRectangle(corners: .concentric, isUniform: true))
+                        .padding()
+                        .frame(width: 200, height: 200)
+                        .presentationCompactAdaptation(.popover)
+                }
         }
     }
 }

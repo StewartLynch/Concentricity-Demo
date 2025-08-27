@@ -22,6 +22,15 @@ struct TheBasicsView: View {
     var body: some View {
         ZStack {
             VStack{
+                ConcentricRectangle()
+//                ConcentricRectangle(corners: .concentric(minimum: 20))
+                    .fill(.red.gradient)
+                    .padding(padding)
+//                Rectangle().fill(.green)
+                Color.green
+//                    .clipShape(.rect(corners: .concentric))
+                    .clipShape(ConcentricRectangle(corners: .concentric, isUniform: true))
+                    .padding(padding)
                 
             }
             Slider(value: $padding, in: 0...100)

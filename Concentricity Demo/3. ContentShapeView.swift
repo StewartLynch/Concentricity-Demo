@@ -23,6 +23,13 @@ struct ContentShapeView: View {
     var body: some View {
         VStack {
            // Concentric Rectangle
+            ConcentricRectangle()
+                .fill(.red.gradient)
+                .padding(padding)
+                .frame(height: 200)
+                .background(.black)
+                .containerShape(.rect(cornerRadius: containerRadius))
+                .padding()
             VStack {
                 Slider(value: $containerRadius, in: 0...100)
                 Text("containerRadius")
@@ -33,7 +40,14 @@ struct ContentShapeView: View {
                 Text("padding")
             }
             .padding()
-            // Clipped Rectangle
+            // Clipped Color
+            Color.cyan
+                .clipShape(ConcentricRectangle())
+                .padding(padding)
+                .frame(height: 200)
+                .background(.black)
+                .containerShape(.capsule)
+                .padding()
         }
     }
 }

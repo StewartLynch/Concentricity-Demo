@@ -21,9 +21,39 @@ struct ClippedConcentricImages: View {
     @State private var spacing = 0.0
     var body: some View {
         VStack(spacing: spacing) {
-            
+            HStack(spacing: spacing){
+                Image(.lahaina)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(ConcentricRectangle())
+                Image(.city)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(ConcentricRectangle())
+            }
+            HStack(spacing: spacing){
+                Image(.petals)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(ConcentricRectangle())
+                Image(.stream)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(ConcentricRectangle())
+            }
+            HStack(spacing: spacing){
+                Image(.lahaina)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(ConcentricRectangle())
+                Image(.city)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(ConcentricRectangle())
+            }
         }
         .padding()
+        .containerShape(.rect(cornerRadius: 60))
         VStack {
             Slider(value: $spacing, in: 0...100)
             Text("Spacing")

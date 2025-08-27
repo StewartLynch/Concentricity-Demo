@@ -19,8 +19,11 @@ import SwiftUI
 
 struct TiledImagesView: View {
     var body: some View {
+        let url = URL(string: "https://picsum.photos/200/300")!
         ScrollView {
            // Tiled Images
+            TiledImage(resource: .petals, rows: 8, cols: 4, spacing: 5)
+            TiledImage(url: url, rows: 7, cols: 4)
         }
         .padding()
     }

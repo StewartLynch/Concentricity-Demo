@@ -54,6 +54,8 @@ struct TiledImage: View {
                     .scaledToFit()
             }
         }
+        .clipShape(ConcentricRectangle())
+        .containerShape(.rect(cornerRadius: 40))
         .ignoresSafeArea()
         .onAppear {
             if let resource {
